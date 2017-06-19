@@ -33,21 +33,21 @@ namespace bf
             zero, then it cycles to the last position of the memory.
     n   -   Move the pointer one cell to the right. if the pointer gets above 
             the available memory, then it becomes zero.
-    i   -   Increments the value of the cell appointed.
-    d   -   Decrements the value of the cell appointed.
-    ()  -   Repeats the code inside the parenthesis until the appointed value 
+    i   -   Increment the value of the cell appointed.
+    d   -   Decrement the value of the cell appointed.
+    ()  -   Repeat the code inside the parenthesis until the appointed value 
             becomes zero.
     w   -   Write the character in the cell appointed the the default output.
-    r   -   Reads one character from the default input to the appointed cell.
-    $   -   Reads everything from the default input to the memory until it 
-            found a new line.
+    r   -   Read one character from the default input to the appointed cell.
+    $   -   Read everything from the default input to the memory until it 
+            find a new line.
     'c  -   Write the character 'c' to the appointed cell.
     ""  -   Write everything between the double quotes to the memory.
-    ;   -   Writes the numeric value of the appointed cell to the default 
+    ;   -   Write the numeric value of the appointed cell to the default 
             output.
-    ^   -   Jumps the pointer back to the first cell.
-    j   -   Jumps the code to the position contained in the current cell.
-    c   -   Clears all the memory.
+    ^   -   Jump the pointer back to the first cell.
+    j   -   Jump the code to the position contained in the current cell.
+    c   -   Clear all the memory.
     %   -   If the current cell has a value greater than zero, generates a 
             random number between zero, and that value, otherwise generates a
             number between zero and INT_MAX.
