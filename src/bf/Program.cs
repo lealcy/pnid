@@ -28,44 +28,7 @@ namespace bf
                     break;
                 } else if (cmd == "h")
                 {
-                    Console.WriteLine(@"Commands:
-    p   -   Move the pointer one cell to the left. if the pointer gets below 
-            zero, then it cycles to the last position of the memory.
-    n   -   Move the pointer one cell to the right. if the pointer gets above 
-            the available memory, then it becomes zero.
-    i   -   Increment the value of the cell appointed.
-    d   -   Decrement the value of the cell appointed.
-    ()  -   Repeat the code inside the parenthesis until the appointed value 
-            becomes zero.
-    w   -   Write the character in the cell appointed the the default output.
-    r   -   Read one character from the default input to the appointed cell.
-    $   -   Read everything from the default input to the memory until it 
-            find a new line.
-    'c  -   Write the character 'c' to the appointed cell.
-    ""  -   Write everything between the double quotes to the memory.
-    ;   -   Write the numeric value of the appointed cell to the default 
-            output.
-    ^   -   Jump the pointer back to the first cell.
-    j   -   Jump the code to the position contained in the current cell.
-    c   -   Clear all the memory.
-    %   -   If the current cell has a value greater than zero, generates a 
-            random number between zero, and that value, otherwise generates a
-            number between zero and INT_MAX.
-    \n  -   Write the number 'n' to the current cell.
-    
-For compatibility with brainfuck, the commands '<>+-[]' are also accepted 
-instead of 'pnid()'.
-
-The default memory size is UInt16.MaxSize.
-
-The Interpreter accept the following commands:
-
-    h   -   Show this help.
-    q   -   Exit the interpreter.
-
-If the execution enters a loop or a deadlock, you can break out of it by 
-pressing ESC.
-                        ");
+                    Help();
                 }
                 for (int i = 0; i < cmd.Length; i++)
                 {
@@ -281,6 +244,47 @@ pressing ESC.
                 }
                 Console.WriteLine("");
             }
+        }
+
+        static void Help()
+        {
+            Console.WriteLine(@"Commands:
+    p   -   Move the pointer one cell to the left. if the pointer gets below 
+            zero, then it cycles to the last position of the memory.
+    n   -   Move the pointer one cell to the right. if the pointer gets above 
+            the available memory, then it becomes zero.
+    i   -   Increment the value of the cell appointed.
+    d   -   Decrement the value of the cell appointed.
+    ()  -   Repeat the code inside the parenthesis until the appointed value 
+            becomes zero.
+    w   -   Write the character in the cell appointed the the default output.
+    r   -   Read one character from the default input to the appointed cell.
+    $   -   Read everything from the default input to the memory until it 
+            find a new line.
+    'c  -   Write the character 'c' to the appointed cell.
+    ""  -   Write everything between the double quotes to the memory.
+    ;   -   Write the numeric value of the appointed cell to the default 
+            output.
+    ^   -   Jump the pointer back to the first cell.
+    j   -   Jump the code to the position contained in the current cell.
+    c   -   Clear all the memory.
+    %   -   If the current cell has a value greater than zero, generates a 
+            random number between zero, and that value, otherwise generates a
+            number between zero and INT_MAX.
+    \n  -   Write the number 'n' to the current cell.
+    
+For compatibility with brainfuck, the commands '<>+-[]' are also accepted 
+instead of 'pnid()'.
+
+The default memory size is UInt16.MaxSize.
+
+The Interpreter accept the following commands:
+
+    h   -   Show this help.
+    q   -   Exit the interpreter.
+
+If the execution enters a loop or a deadlock, you can break out of it by 
+pressing ESC.");
         }
     }
 }
